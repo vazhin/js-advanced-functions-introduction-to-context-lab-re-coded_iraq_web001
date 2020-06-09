@@ -22,7 +22,6 @@ function createEmployeeRecords(arr) {
 
 function addTimeInAndOut(employeeRecordObj, dateTimeString, property, type) {
   let [date, hour] = dateTimeString.split(' ')
-  employeeRecordObj[property] = []
   employeeRecordObj[property].push({
     type: type,
     date: date,
