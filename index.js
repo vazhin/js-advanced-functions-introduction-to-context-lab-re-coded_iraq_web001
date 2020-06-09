@@ -52,7 +52,7 @@ function wagesEarnedOnDate(employeeRecordObj, dateString) {
 function allWagesFor(employeeRecordObj) {
   let datesArr = employeeRecordObj.timeInEvents.map(element => element.date)
   return datesArr.reduce((accumulator, currentValue) => {
-    accumulator += wagesEarnedOnDate(employeeRecordObj, currentValue)
+    accumulator + wagesEarnedOnDate(employeeRecordObj, currentValue)
     return accumulator
   }, 0)
 }
