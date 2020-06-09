@@ -25,8 +25,8 @@ function addTimeInAndOut(employeeRecordObj, dateTimeString, property, type) {
   employeeRecordObj[property] = []
   employeeRecordObj[property].push({
     type: type,
-    date: `${dateTimeString.slice(0, 10)}`,
-    hour: hour
+    date: date,
+    hour: Number(hour)
   })
   return employeeRecordObj
 }
