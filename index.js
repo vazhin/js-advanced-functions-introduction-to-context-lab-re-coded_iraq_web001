@@ -49,8 +49,12 @@ function wagesEarnedOnDate(employeeRecordObj, dateString) {
   return hoursWorkedOnDate(employeeRecordObj, dateString) * employeeRecordObj.payPerHour
 }
 
-function allWagesFor(recordObject) {
-  return recordObject.timeInEvents.map(record => wagesEarnedOnDate(recordObject, record.date)).reduce((a, b) => a + b);
+function allWagesFor(employeeRecordObj) {
+  let datesArr = employeeRecordObj.timeInEvents.map(element => element.date)
+  return datesArr.reduce((accumulator, currentValue) => {
+    accumulator += wagesEarnedOnDate(employeeRecordObj, currentValue)
+    return accumulator
+  }, 0)
 }
 
 function findEmployeeByFirstName(employeeRecordsArr, firstName) {
