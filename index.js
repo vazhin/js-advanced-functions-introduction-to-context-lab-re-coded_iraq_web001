@@ -23,12 +23,13 @@ function createEmployeeRecords(arr) {
 function createTimeInEvent(employeeRecordObj, dateTimeString) {
   let [date, hour] = dateTimeString.split(' ')
   employeeRecordObj.timeInEvents = []
-  employeeRecordObj.timeInEvents.push({
+  let timeInEvent = {
     type: "TimeIn",
     date: date,
     hour: Number(hour)
   })
-  return employeeRecordObj
+  employeeRecordObj.
+  return employeeRecordObj.timeInEvents.push(timeInEvents)
 }
 
 function createTimeOutEvent(employeeRecordObj, dateTimeString) {
