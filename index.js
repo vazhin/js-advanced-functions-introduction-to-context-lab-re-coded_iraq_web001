@@ -21,12 +21,11 @@ function createEmployeeRecords(arr) {
 }
 
 function addTimeInAndOut(employeeRecordObj, dateTimeString, property, type) {
-  let hour = parseInt(dateTimeString.slice(11), 10)
-  employeeRecordObj[property] = []
+  let [date, hour] = dateTimeString.split(' ')
   employeeRecordObj[property].push({
     type: type,
-    date: `${dateTimeString.slice(0, 10)}`,
-    hour: hour
+    date: date,
+    hour: Number(hour)
   })
   return employeeRecordObj
 }
