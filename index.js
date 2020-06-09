@@ -28,8 +28,8 @@ function createTimeInEvent(employeeRecordObj, dateTimeString) {
     date: date,
     hour: Number(hour)
   }
-  employeeRecordObj.
-  return employeeRecordObj.timeInEvents.push(timeInEvents)
+  employeeRecordObj.timeInEvents.push(timeInEvents)
+  return employeeRecordObj
 }
 
 function createTimeOutEvent(employeeRecordObj, dateTimeString) {
