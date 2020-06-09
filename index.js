@@ -27,7 +27,7 @@ function createTimeInEvent(employeeRecordObj, dateTimeString) {
     type: "TimeIn",
     date: date,
     hour: Number(hour)
-  })
+  }
   employeeRecordObj.
   return employeeRecordObj.timeInEvents.push(timeInEvents)
 }
@@ -39,7 +39,7 @@ function createTimeOutEvent(employeeRecordObj, dateTimeString) {
     type: "TimeOut",
     date: date,
     hour: Number(hour)
-  })
+  }
   return employeeRecordObj
 }
 
