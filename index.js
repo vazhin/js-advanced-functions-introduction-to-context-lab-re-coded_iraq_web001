@@ -33,8 +33,8 @@ function createTimeInEvent(employeeRecordObj, dateTimeString) {
 
 function createTimeOutEvent(employeeRecordObj, dateTimeString) {
   let hour = parseInt(dateTimeString.slice(11), 10)
-  employeeRecordObj[property] = []
-  employeeRecordObj[property].push({
+  employeeRecordObj.timeOutEvents = []
+  employeeRecordObj.timeOutEvents.push({
     type: type,
     date: `${dateTimeString.slice(0, 10)}`,
     hour: hour
