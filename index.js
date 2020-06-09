@@ -24,7 +24,7 @@ function createTimeInEvent(employeeRecordObj, dateTimeString) {
   let hour = parseInt(dateTimeString.slice(11), 10)
   employeeRecordObj.timeInEvents = []
   employeeRecordObj.timeInEvents.push({
-    type: type,
+    type: "TimeIn",
     date: `${dateTimeString.slice(0, 10)}`,
     hour: hour
   })
