@@ -20,28 +20,23 @@ function createEmployeeRecords(arr) {
     }, [])
 }
 
-function createTimeInEvent(employeeRecordObj, dateTimeString) {
+function addTimeInAndOut(employeeRecordObj, dateTimeString, property, type) {
   let [date, hour] = dateTimeString.split(' ')
-  employeeRecordObj.timeInEvents = []
-  let timeInEvent = {
-    type: "TimeIn",
+  employeeRecordObj[property] = []
+  employeeRecordObj[property].push({
+    type: type,
     date: date,
     hour: Number(hour)
-  }
-  employeeRecordObj.timeInEvents.push(timeInEvents)
+  })
   return employeeRecordObj
 }
 
+function createTimeInEvent(employeeRecordObj, dateTimeString) {
+ return addTimeInAndOut(employeeRecordObj, dateTimeString, 'timeInEvents', "TimeIn")
+}
+
 function createTimeOutEvent(employeeRecordObj, dateTimeString) {
-  let [date, hour] = dateTimeString.split(' ')
-  employeeRecordObj.timeOutEvents = []
-  let timeInEvent = {
-    type: "TimeOut",
-    date: date,
-    hour: Number(hour)
-  }
-  employeeRecordObj.timeOutEvents.push(timeInEvents)
-  return employeeRecordObj
+  return addTimeInAndOut(employeeRecordObj, dateTimeString, 'timeOutEvents', "TimeOut")
 }
 
 function hoursWorkedOnDate(employeeRecordObj, dateString) {
