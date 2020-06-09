@@ -20,10 +20,6 @@ function createEmployeeRecords(arr) {
     }, [])
 }
 
-function addTimeInAndOut(employeeRecordObj, dateTimeString, property, type) {
-
-}
-
 function createTimeInEvent(employeeRecordObj, dateTimeString) {
   let [date, hour] = dateTimeString.split(' ')
   employeeRecordObj.timeInEvents = []
