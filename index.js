@@ -35,7 +35,7 @@ function createTimeInEvent(employeeRecordObj, dateTimeString) {
 function createTimeOutEvent(employeeRecordObj, dateTimeString) {
   let [date, hour] = dateTimeString.split(' ')
   employeeRecordObj.timeOutEvents = []
-  employeeRecordObj.timeOutEvents.push({
+  let timeInEvent = {
     type: "TimeOut",
     date: date,
     hour: Number(hour)
