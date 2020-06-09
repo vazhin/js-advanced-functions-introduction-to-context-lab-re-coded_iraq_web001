@@ -40,7 +40,7 @@ function createTimeOutEvent(employeeRecordObj, dateTimeString) {
     date: date,
     hour: Number(hour)
   }
-  employeeRecordObj.timeInEvents.push(timeInEvents)
+  employeeRecordObj.timeOutEvents.push(timeInEvents)
   return employeeRecordObj
 }
 
